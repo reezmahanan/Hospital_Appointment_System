@@ -5,16 +5,15 @@ import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "patients")
+@Table(name = "doctors")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Patient {
+public class Doctor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,6 +27,10 @@ public class Patient {
     @Column(nullable = false)
     private String lastName;
 
+    @NotBlank(message = "Specialization is required")
+    @Column(nullable = false)
+    private String specialization;
+
     @NotBlank(message = "Email is required")
     @Email(message = "Invalid email format")
     @Column(unique = true, nullable = false)
@@ -37,11 +40,7 @@ public class Patient {
     @Column(nullable = false)
     private String phoneNumber;
 
-    @NotNull(message = "Date of birth is required")
-    private LocalDate dateOfBirth;
-
-    private String gender;
-
-    @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    // One Doctor can have many Appointments
+    @OneToMany(mappedBy = "doctor", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Appointment> appointments = new ArrayList<>();
 }
