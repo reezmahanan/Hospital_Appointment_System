@@ -328,17 +328,18 @@ json
 }
 ```
 👥 Team Members
--Member ID	Member Name	Responsibility	What to Implement
--23IT0522	J A N Rashmina	Project Setup and GitHub Management	Create Spring Boot project, configure dependencies, create package structure, setup MYSQL, create application.properties, manage GitHub repository and merge pull requests
--23IT0480	M R Hanan	Patient entity and Repository	Create Patient entity and PatientRepository
--23IT0504	N M Mahuroos	Patient DTO, Service & Controller	Create Patient DTOs, service interface/implementation and controller with CRUD APIs
--23IT0472	D M S A K Dissanayaka	Doctor Entity & Repository	Create Doctor entity and DoctorRepository
--23IT0541	W H N Umedya	Doctor DTO Service & Controller	Create Doctor DTOs, service interface/implementation and controller with CRUD APIs
--23IT0532	K T S U Senanayaka	Appointment Entity & Repository	Create Appointment entity, AppointmentStatus enum and AppointmentRepository
--23IT0501	I D N V Lakpura	Appointment DTO, Service & Business Logic	Create appointment DTOs, booking logic, overlap validation, filter methods
--23IT0536	M A C M Silva	Appointment Controller & API Response	Create appointment controller, standard ApiResponse wrapper and endpoint testing support
--23IT0519	W A C Ramindu	Validation, Exceptions, Postman & Documentation	Global exception handler, custom exceptions, validation testing, Postman collection, README and presentation slides
-
+```
+Member	    Responsibility
+J A N Rashmina	Project Setup, Database Configuration, GitHub Management
+M R Hanan	Patient Entity & Repository
+N M Mahuroos	Patient DTO, Service & Controller
+D M S A K Dissanayaka	Doctor Entity & Repository
+W H N Umedya	Doctor DTO, Service & Controller
+K T S U Senanayaka Appointment Entity & Repository
+I D N V Lakpura	Appointment Service & Business Logic (Overlap Prevention)
+M A C M Silva	Appointment Controller & API Response Wrapper
+W A C Ramindu	Exception Handling, Validation, Postman Testing, Documentation
+```
 📞 Support
 For any issues or questions, please contact the team members or refer to the project documentation.
 
